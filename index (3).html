@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<title>Aloosane | Somali Community</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2c;--panel2:#11243a;--line:#203650;--cyan:#54e3e5;--blue:#1687ef;--text:#f4f8ff;--muted:#9db1c8;--danger:#ff6b7a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#102c47 0,#07111f 48%,#050b13 100%);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
+button,input,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:10px 15px;color:white;background:linear-gradient(120deg,#087ee8,#16b5d2);font-weight:700}button:hover{filter:brightness(1.1)}button:disabled{opacity:.5;cursor:not-allowed}
+a{color:var(--cyan);text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 18px}
+header{position:sticky;top:0;z-index:5;background:#07111feF;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-size:22px;font-weight:900;letter-spacing:.4px}.brand span{color:var(--cyan)}.navlinks{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.navlinks button{background:var(--panel2);border:1px solid var(--line);padding:8px 13px}.navlinks button.active{background:linear-gradient(120deg,#087ee8,#16b5d2)}
+main{padding:28px 0 95px}.hero{display:grid;grid-template-columns:1.5fr .8fr;gap:20px;align-items:stretch;margin-bottom:24px}.hero-main,.profile-card,.panel,.post{background:linear-gradient(145deg,#10253a,#0a1727);border:1px solid var(--line);border-radius:22px;box-shadow:0 12px 32px #0002}
+.hero-main{padding:clamp(22px,5vw,48px)}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:2px;font-weight:900}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.08;margin:14px 0}.hero h1 span{color:var(--cyan)}.hero p{color:var(--muted);max-width:600px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.secondary{background:#142a40;border:1px solid var(--line)}.profile-card{padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.avatar{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(140deg,#54e3e5,#1687ef);color:#06111d;font-size:30px;font-weight:900;border:4px solid #ffffff15}.profile-card h2{margin:12px 0 2px}.profile-card p{color:var(--muted);margin:3px 0 16px}.stats{display:flex;gap:22px;margin-top:18px}.stats strong{display:block;color:var(--cyan);font-size:20px}.stats small{color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px}.panel{padding:20px;margin-bottom:18px}.section-title{margin:0 0 14px;font-size:20px}.muted{color:var(--muted)}.field{display:block;width:100%;padding:12px 14px;margin:9px 0;background:#071321;border:1px solid var(--line);border-radius:12px;color:var(--text);outline:none}.field:focus{border-color:var(--cyan)}textarea.field{resize:vertical;min-height:90px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row .field{flex:1;min-width:140px}.feed{display:flex;flex-direction:column;gap:14px}.post{padding:18px}.post-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}.mini-avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#123c59;color:var(--cyan);font-weight:900}.post-head strong{display:block}.post-head small{color:var(--muted)}.post-text{white-space:pre-wrap;overflow-wrap:anywhere;margin:10px 0 15px}.post-actions{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px}.post-actions button{background:#142a40;border:1px solid var(--line);padding:7px 12px}.comments{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}.comment{background:#081524;padding:9px 11px;border-radius:10px;margin:7px 0;overflow-wrap:anywhere}.comment b{color:var(--cyan);margin-right:5px}.comment-form{display:flex;gap:8px;margin-top:10px}.comment-form input{flex:1;min-width:0}.comment-form .field{margin:0;padding:9px 11px}.side-link{display:block;padding:12px;background:#091727;border:1px solid var(--line);border-radius:12px;margin-top:10px}.empty{text-align:center;padding:32px;color:var(--muted);border:1px dashed var(--line);border-radius:16px}.hidden{display:none!important}.notice{font-size:13px;color:var(--muted);padding:10px 12px;background:#071321;border-radius:10px;margin-top:12px}.bottom-refresh{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:4;box-shadow:0 8px 28px #0008;display:flex;gap:8px;align-items:center}.bottom-refresh button{border-radius:999px;padding:12px 20px}.footer{text-align:center;color:var(--muted);padding:20px 0;font-size:13px}
+@media(max-width:800px){.hero,.layout{grid-template-columns:1fr}.profile-card{padding:22px}.layout{gap:8px}.nav{align-items:flex-start;padding:12px 0;flex-direction:column}.navlinks{width:100%}.navlinks button{flex:1}.stats{gap:16px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand">ALOOSANE<span>.</span></div>
+  <div class="navlinks">
+    <button class="active" data-view="home">Home</button><button data-view="community">Community</button><button data-view="profile">Profile</button><button id="authNav">Log in</button>
+  </div>
+</div></header>
+<main class="wrap">
+<section class="hero">
+  <div class="hero-main">
+    <div class="eyebrow">ALOOSANE • CONNECT & SHARE</div>
+    <h1>Ku soo dhawoow<br><span>Community-ga Aloosane</span></h1>
+    <p>Meel ay bulshada Aloosane ku wadaagaan qoraallo, fikrado iyo warar wanaagsan. Ku soo biir bulshada, samee profile-kaaga, oo la wadaag qoraal.</p>
+    <div class="hero-actions"><button id="joinBtn">Ku soo biir Community-ga</button><a class="secondary" style="padding:10px 15px;border-radius:12px" href="https://www.tiktok.com/@king_hassan16" target="_blank" rel="noopener">TikTok @king_hassan16 ↗</a></div>
+  </div>
+  <div class="profile-card"><div class="avatar" id="heroAvatar">A</div><h2 id="heroName">Aloosane Community</h2><p id="heroBio">Community Admin & Creator</p><a href="https://www.tiktok.com/@king_hassan16" target="_blank" rel="noopener"><button>Follow TikTok</button></a><div class="stats"><div><strong id="memberCount">1</strong><small>Members</small></div><div><strong id="postCount">0</strong><small>Posts</small></div><div><strong id="commentCount">0</strong><small>Comments</small></div></div></div>
+</section>
+<div class="layout">
+<div>
+<section id="authPanel" class="panel hidden">
+<h2 class="section-title" id="authTitle">Log in / Create account</h2>
+<p class="muted">Account-ka waxaa lagu kaydinayaa browser-kan qalabkaaga.</p>
+<form id="authForm"><input class="field" id="authName" placeholder="Magacaaga" maxlength="40" required><input class="field" id="authEmail" type="email" placeholder="Email" required><input class="field" id="authPassword" type="password" placeholder="Password (ugu yaraan 6 xaraf)" minlength="6" required><div class="row"><button type="submit" id="authSubmit">Create account</button><button type="button" class="secondary" id="toggleAuth">Already have account? Log in</button></div></form><div id="authMessage" class="notice hidden"></div>
+</section>
+<section id="profilePanel" class="panel hidden">
+<h2 class="section-title">Profile-kaaga</h2><form id="profileForm"><label class="muted" for="profileName">Magaca</label><input class="field" id="profileName" maxlength="40" required><label class="muted" for="profileBio">Bio</label><textarea class="field" id="profileBio" maxlength="180" placeholder="Wax yar naftaada ka sheeg..."></textarea><button type="submit">Save Profile</button></form><div id="profileMessage" class="notice hidden"></div>
+</section>
+<section id="composer" class="panel hidden"><h2 class="section-title">Qoraal cusub</h2><form id="postForm"><textarea class="field" id="postText" maxlength="2000" placeholder="Maxaad rabtaa inaad bulshada la wadaagto? (Qoraal keliya)" required></textarea><div class="row"><span class="muted" id="charCount">0 / 2000</span><spacer style="flex:1"></spacer><button type="submit">Publish Post</button></div></form></section>
+<section><h2 class="section-title" id="feedTitle">Community Posts</h2><div id="feed" class="feed"><div class="empty">Weli qoraal ma jiro. Log in oo qoraalkaaga ugu horreeya la wadaag!</div></div></section>
+</div>
+<aside>
+<section class="panel"><h2 class="section-title">About Aloosane</h2><p class="muted">Bulsho online ah oo loogu talagalay isku xirka, wadaagista qoraallada iyo is-dhexgalka xubnaha.</p><a class="side-link" href="https://www.tiktok.com/@king_hassan16" target="_blank" rel="noopener">🎵 TikTok: @king_hassan16</a><div class="notice">Fadlan ixtiraam xubnaha kale. Qoraallada halkan waa qoraal keliya.</div></section>
+<section class="panel"><h2 class="section-title">Community</h2><p class="muted">Ku biir si aad u samaysato profile, u publish-gareyso qoraal, una comment-gareyso posts.</p><button id="sideJoin" style="width:100%">Join Community</button></section>
+</aside>
+</div>
+<div class="footer">© <span id="year"></span> Aloosane Community • Made with care</div>
+</main>
+<div class="bottom-refresh"><button id="refreshBtn">↻ Refresh Feed</button></div>
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const STORE="aloosane_community_v1";
+let data={users:[],posts:[],currentUser:null};
+let isLogin=false;
+function load(){try{const saved=localStorage.getItem(STORE);if(saved){const parsed=JSON.parse(saved);if(parsed&&Array.isArray(parsed.users)&&Array.isArray(parsed.posts))data=parsed;}}catch(e){console.warn("Could not load local community data",e)}}
+function save(){try{localStorage.setItem(STORE,JSON.stringify(data));}catch(e){alert("Kaydintu way fashilantay. Hubi browser storage.");}}
+function user(){return data.users.find(u=>u.id===data.currentUser)||null}
+function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function initials(name){return (name||"A").trim().split(/\s+/).slice(0,2).map(x=>x[0]||"").join("").toUpperCase()||"A"}
+function show(id){["authPanel","profilePanel","composer"].forEach(x=>$(x).classList.add("hidden"));if(id)$(id).classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"})}
+function refresh(){const me=user();$("authNav").textContent=me?"Log out":"Log in";$("heroName").textContent=me?me.name:"Aloosane Community";$("heroAvatar").textContent=initials(me?me.name:"Aloosane");$("heroBio").textContent=me?(me.bio||"Community Member"):"Community Admin & Creator";$("memberCount").textContent=data.users.length||1;$("postCount").textContent=data.posts.length;$("commentCount").textContent=data.posts.reduce((n,p)=>n+(p.comments||[]).length,0);$("composer").classList.toggle("hidden",!me);renderFeed();if(me){$("profileName").value=me.name;$("profileBio").value=me.bio||""}}
+function renderFeed(){const feed=$("feed");if(!data.posts.length){feed.innerHTML='<div class="empty">Weli qoraal ma jiro. '+(user()?'Qoraalkaaga ugu horreeya la wadaag!':'Log in oo bulshada ku soo biir.')+'</div>';return}
+feed.innerHTML=data.posts.slice().reverse().map(p=>{const author=data.users.find(u=>u.id===p.userId);const comments=p.comments||[];return `<article class="post"><div class="post-head"><div class="mini-avatar">${safe(initials(author?author.name:"Member"))}</div><div><strong>${safe(author?author.name:"Member")}</strong><small>${safe(p.date||"")}</small></div></div><div class="post-text">${safe(p.text)}</div><div class="post-actions"><button type="button" data-comment-toggle="${safe(p.id)}">💬 Comments (${comments.length})</button>${user()&&user().id===p.userId?`<button type="button" data-delete="${safe(p.id)}">Delete post</button>`:""}</div><div class="comments">${comments.map(c=>{const cu=data.users.find(u=>u.id===c.userId);return `<div class="comment"><b>${safe(cu?cu.name:"Member")}:</b>${safe(c.text)}</div>`}).join("")}<form class="comment-form" data-comment-form="${safe(p.id)}"><input class="field" name="comment" maxlength="500" placeholder="${user()?"Write a comment...":"Log in to comment"}" ${user()?"":"disabled"} required><button type="submit" ${user()?"":"disabled"}>Send</button></form></div></article>`}).join("")}
+function openAuth(login){isLogin=login;$("authTitle").textContent=login?"Log in":"Create account";$("authSubmit").textContent=login?"Log in":"Create account";$("authName").classList.toggle("hidden",login);$("authName").required=!login;$("toggleAuth").textContent=login?"Need an account? Create one":"Already have account? Log in";$("authMessage").classList.add("hidden");show("authPanel")}
+function requireUser(){if(!user()){openAuth(false);return false}return true}
+$("authNav").addEventListener("click",()=>{if(user()){data.currentUser=null;save();refresh();show(null)}else openAuth(true)});
+$("joinBtn").addEventListener("click",()=>user()?show("profilePanel"):openAuth(false));$("sideJoin").addEventListener("click",()=>user()?show("profilePanel"):openAuth(false));
+document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-view]").forEach(x=>x.classList.toggle("active",x===b));if(b.dataset.view==="profile"){if(requireUser())show("profilePanel")}else if(b.dataset.view==="community"){show(user()?"composer":null);$("feedTitle").textContent="Community Posts"}else{show(null);$("feedTitle").textContent="Community Posts"}}));
+$("toggleAuth").addEventListener("click",()=>openAuth(!isLogin));
+$("authForm").addEventListener("submit",e=>{e.preventDefault();const name=$("authName").value.trim(),email=$("authEmail").value.trim().toLowerCase(),password=$("authPassword").value;if(isLogin){const found=data.users.find(u=>u.email===email&&u.password===password);if(!found){$("authMessage").textContent="Email ama password waa khalad."; $("authMessage").classList.remove("hidden");return}data.currentUser=found.id;}else{if(data.users.some(u=>u.email===email)){$("authMessage").textContent="Email-kan account ayaa hore loogu sameeyay. Log in samee."; $("authMessage").classList.remove("hidden");return}const newUser={id:"u"+Date.now().toString(36)+Math.random().toString(36).slice(2,7),name,email,password,bio:""};data.users.push(newUser);data.currentUser=newUser.id;}save();refresh();show(null);$("authForm").reset()});
+$("profileForm").addEventListener("submit",e=>{e.preventDefault();const me=user();if(!me)return;me.name=$("profileName").value.trim();me.bio=$("profileBio").value.trim();save();refresh();$("profileMessage").textContent="Profile-ka waa la kaydiyay."; $("profileMessage").classList.remove("hidden")});
+$("postText").addEventListener("input",()=>$("charCount").textContent=$("postText").value.length+" / 2000");
+$("postForm").addEventListener("submit",e=>{e.preventDefault();if(!requireUser())return;const text=$("postText").value.trim();if(!text)return;data.posts.push({id:"p"+Date.now().toString(36)+Math.random().toString(36).slice(2,5),userId:user().id,text,date:new Date().toLocaleString(),comments:[]});save();$("postForm").reset();$("charCount").textContent="0 / 2000";refresh()});
+$("feed").addEventListener("click",e=>{const toggle=e.target.closest("[data-comment-toggle]");if(toggle){const form=$("feed").querySelector(`[data-comment-form="${CSS.escape(toggle.dataset.commentToggle)}"]`);if(form){form.querySelector("input").focus()}return}const del=e.target.closest("[data-delete]");if(del&&user()&&confirm("Ma tirtiraysaa qoraalkan?")){data.posts=data.posts.filter(p=>p.id!==del.dataset.delete);save();refresh()}});
+$("feed").addEventListener("submit",e=>{const form=e.target.closest("[data-comment-form]");if(!form)return;e.preventDefault();if(!requireUser())return;const field=form.elements.comment,text=field.value.trim();if(!text)return;const post=data.posts.find(p=>p.id===form.dataset.commentForm);if(post){post.comments=post.comments||[];post.comments.push({userId:user().id,text,date:new Date().toLocaleString()});save();refresh()}});
+$("refreshBtn").addEventListener("click",()=>{load();refresh();$("refreshBtn").textContent="✓ Feed refreshed";setTimeout(()=>{$("refreshBtn").textContent="↻ Refresh Feed"},1200)});
+$("year").textContent=new Date().getFullYear();load();refresh();
+})();
+</script>
+</body>
+</html>
